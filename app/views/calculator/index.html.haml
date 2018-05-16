@@ -1,0 +1,10 @@
+=form_tag(controller: :calculator , action: :create) do
+  .input
+    =text_field_tag "calculator[string]"
+    =button_tag 'Calculate' , type: :submit
+%p
+  = @notice
+%p
+  = @string
+%p
+  = @value
