@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'calculator/calculate'
-  root to: 'calculator#calculate'
+  resources :calculator, only: [:index, :create]
+  root to: 'calculator#index'
 end
