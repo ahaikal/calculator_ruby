@@ -1,6 +1,8 @@
 class Operator
 
   def calculate(string)
+    # if string contains special character or letters then return string
+    return string if string.match(/[a-z|$&,:;=?@#|'<>^()%!]/)
     string_array = string.split(/(\*|\/|\+|\-)/)
     if index = string_array.reject(&:empty?).index{|c| c =~ /(\*|\/)/ }
       new_string = operate(string_array, index)
